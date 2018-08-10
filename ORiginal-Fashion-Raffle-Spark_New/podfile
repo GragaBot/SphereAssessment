@@ -1,0 +1,25 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'FashionRaffle' do
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'FirebaseUI/Storage', '~> 0.6'
+pod 'SDWebImage', '~>3.8'
+pod 'SVProgressHUD'
+pod 'Cache'
+pod 'Fusuma'
+pod 'Imaginary'
+pod 'NohanaImagePicker'
+pod 'ESPullToRefresh'
+pod 'CryptoSwift'
+pod 'HGCircularSlider', '~> 2.0.0'
+pod 'AnimatedDropdownMenu'
+pod 'Sharaku'
+
+
+
+end
+

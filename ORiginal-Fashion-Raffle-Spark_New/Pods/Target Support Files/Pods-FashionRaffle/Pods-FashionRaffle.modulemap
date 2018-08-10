@@ -1,0 +1,6 @@
+framework module Pods_FashionRaffle {
+  umbrella header "Pods-FashionRaffle-umbrella.h"
+
+  export *
+  module * { export * }
+}

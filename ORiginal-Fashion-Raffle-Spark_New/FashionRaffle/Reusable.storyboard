@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tHj-cE-zS1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reusable Detai View Controller-->
+        <scene sceneID="7MF-gr-923">
+            <objects>
+                <collectionViewController storyboardIdentifier="DetailViewVC" id="tHj-cE-zS1" customClass="ReusableDetaiViewController" customModule="FashionRaffle" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="kel-HN-fr4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="d0r-uB-u6A">
+                            <size key="itemSize" width="375" height="400"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionDetailCell" id="eZg-91-A5h" customClass="ReusableCollectionCell" customModule="FashionRaffle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="111.5" width="375" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bn-Q3-slD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-XN-8YQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="K9j-XN-8YQ" secondAttribute="bottom" id="3D1-Ul-33n"/>
+                                                <constraint firstItem="K9j-XN-8YQ" firstAttribute="top" secondItem="3bn-Q3-slD" secondAttribute="top" id="5Mk-ZX-4ko"/>
+                                                <constraint firstItem="K9j-XN-8YQ" firstAttribute="centerX" secondItem="3bn-Q3-slD" secondAttribute="centerX" id="A4y-8g-uG9"/>
+                                                <constraint firstItem="K9j-XN-8YQ" firstAttribute="leading" secondItem="3bn-Q3-slD" secondAttribute="leading" id="B3l-Uz-wZ6"/>
+                                                <constraint firstItem="K9j-XN-8YQ" firstAttribute="centerY" secondItem="3bn-Q3-slD" secondAttribute="centerY" id="FQc-Ht-Ayj"/>
+                                                <constraint firstAttribute="trailing" secondItem="K9j-XN-8YQ" secondAttribute="trailing" id="fUj-S5-BLX"/>
+                                            </constraints>
+                                        </scrollView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="3bn-Q3-slD" firstAttribute="top" secondItem="eZg-91-A5h" secondAttribute="top" id="999-I8-hoR"/>
+                                    <constraint firstAttribute="bottom" secondItem="3bn-Q3-slD" secondAttribute="bottom" id="E7N-FR-mN0"/>
+                                    <constraint firstItem="3bn-Q3-slD" firstAttribute="centerX" secondItem="eZg-91-A5h" secondAttribute="centerX" id="WWO-Cj-Okv"/>
+                                    <constraint firstItem="3bn-Q3-slD" firstAttribute="leading" secondItem="eZg-91-A5h" secondAttribute="leading" id="Zv0-v7-By6"/>
+                                    <constraint firstItem="3bn-Q3-slD" firstAttribute="centerY" secondItem="eZg-91-A5h" secondAttribute="centerY" id="iNr-a4-zVM"/>
+                                    <constraint firstAttribute="trailing" secondItem="3bn-Q3-slD" secondAttribute="trailing" id="iy1-mP-NL9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="collectionImageView" destination="K9j-XN-8YQ" id="1HV-XB-SaY"/>
+                                    <outlet property="collectionScrollView" destination="3bn-Q3-slD" id="TB5-L1-2cx"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="tHj-cE-zS1" id="tKT-Ww-HJW"/>
+                            <outlet property="delegate" destination="tHj-cE-zS1" id="kQf-ki-LWl"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="UTT-x3-jsr">
+                        <barButtonItem key="rightBarButtonItem" title="Delete" id="aCE-Y7-B1m">
+                            <color key="tintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deleteAction:" destination="tHj-cE-zS1" id="CG3-c1-u4M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="aCE-Y7-B1m" id="b1z-K5-RFw"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAe-2t-CfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4090" y="762"/>
+        </scene>
+    </scenes>
+</document>
