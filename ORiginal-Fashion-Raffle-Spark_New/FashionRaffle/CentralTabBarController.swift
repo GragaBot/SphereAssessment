@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import YPImagePicker
 
 class CentralTabBarController: UITabBarController {
     override func viewDidLoad() {
@@ -43,7 +44,7 @@ class CentralTabBarController: UITabBarController {
             self.view.addSubview(button)
         }
     }
-    
+    @objc
     func centralAction() {
         
         let story = UIStoryboard(name: "Camera", bundle: nil)

@@ -100,6 +100,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Sharaku/Sharaku.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SteviaLayout/Stevia.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/YPImagePicker/YPImagePicker.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AnimatedDropdownMenu/AnimatedDropdownMenu.framework"
@@ -113,6 +115,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Sharaku/Sharaku.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SteviaLayout/Stevia.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/YPImagePicker/YPImagePicker.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

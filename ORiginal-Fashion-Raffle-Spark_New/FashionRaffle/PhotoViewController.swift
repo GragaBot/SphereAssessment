@@ -10,7 +10,7 @@ import UIKit
 //import Sharaku
 import AnimatedDropdownMenu
 import Fusuma
-
+import YPImagePicker
 
 class PhotoViewController: UIViewController, FusumaDelegate {
 
@@ -26,7 +26,7 @@ class PhotoViewController: UIViewController, FusumaDelegate {
     
     
     var fusumaOne : FusumaViewController?
-    //var shOne : SHViewController?
+    var ypOne : YPImagePicker?
     var passingImage : UIImage?
     
     var centralVC : CentralTabBarController?
@@ -57,7 +57,7 @@ class PhotoViewController: UIViewController, FusumaDelegate {
         
         self.navigationController?.isNavigationBarHidden = true
         
-        
+        /*
         let fusuma = FusumaViewController()
         fusuma.delegate = self
         //fusuma.hasVideo = true //To allow for video capturing with .library and .camera available by default
@@ -68,7 +68,7 @@ class PhotoViewController: UIViewController, FusumaDelegate {
         self.view.addSubview(fusuma.view)
         fusuma.didMove(toParentViewController: self)
         fusumaOne = fusuma
-        
+        */
         /*
          let fusuma = FusumaViewController()
          fusuma.delegate = self
@@ -77,6 +77,33 @@ class PhotoViewController: UIViewController, FusumaDelegate {
          self.view.addSubview(fusuma.view)
          fusuma.didMove(toParentViewController: self)
          fusumaOne = fusuma*/
+        var config = YPImagePickerConfiguration()
+        config.showsVideo = false
+        config.onlySquareImagesFromLibrary = true
+        config.usesFrontCamera = false
+
+        let picker = YPImagePicker(configuration: config)
+        //present(picker, animated: true, completion: nil)
+        picker.view.frame = self.view.frame
+        self.addChildViewController(picker)
+        self.view.addSubview(picker.view)
+        picker.didMove(toParentViewController: self)
+        
+        
+        ypOne = picker
+        
+        picker.didSelectImage = { [unowned picker] img in
+            // image picked
+            print(img.size)
+            self.imageView.image = img
+            //picker.dismiss(animated: true, completion: nil)
+            UIView.animate(withDuration: 0.4, animations: {
+                self.navigationController?.isNavigationBarHidden = false
+                picker.view.frame.origin.x = 0 - self.view.frame.width - 100
+            })
+            
+
+        }
         
         setupAnimatedDropdownMenu()
         giveAwayContainer.isHidden = true
@@ -137,7 +164,7 @@ class PhotoViewController: UIViewController, FusumaDelegate {
             animatedDropDown.dismiss()
             
             self.navigationController?.isNavigationBarHidden = true
-            self.fusumaOne?.view.frame.origin.x = self.view.frame.origin.x
+            self.ypOne?.view.frame.origin.x = self.view.frame.origin.x
             
         })
         

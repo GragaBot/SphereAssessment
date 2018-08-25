@@ -40,6 +40,11 @@ PODS:
   - Fusuma (1.2.4)
   - GoogleInterchangeUtilities (1.2.2):
     - GoogleSymbolUtilities (~> 1.1)
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
+    - GoogleMaps/Base
   - GoogleNetworkingUtilities (1.2.2):
     - GoogleSymbolUtilities (~> 1.1)
   - GoogleSymbolUtilities (1.1.2)
@@ -53,7 +58,10 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - Sharaku (1.0.2)
+  - SteviaLayout (4.0.0)
   - SVProgressHUD (2.0.3)
+  - YPImagePicker (2.4.0):
+    - SteviaLayout (~> 4.0.0)
 
 DEPENDENCIES:
   - AnimatedDropdownMenu
@@ -66,12 +74,14 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseUI/Storage (~> 0.6)
   - Fusuma
+  - GoogleMaps
   - HGCircularSlider (~> 2.0.0)
   - Imaginary
   - NohanaImagePicker
   - SDWebImage (~> 3.8)
   - Sharaku
   - SVProgressHUD
+  - YPImagePicker
 
 SPEC CHECKSUMS:
   AnimatedDropdownMenu: 64460794ca55b0672fced8720c51c405e2b6f5a7
@@ -88,6 +98,7 @@ SPEC CHECKSUMS:
   FirebaseUI: cfe7b83264b9fbdd7e4c9804327a397471e2643b
   Fusuma: e85c394878a2e1549c67140ba7c038aff8d7581c
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GoogleNetworkingUtilities: 3edd3a8161347494f2da60ea0deddc8a472d94cb
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
@@ -96,8 +107,10 @@ SPEC CHECKSUMS:
   NohanaImagePicker: ae909c23150c30e29ab2c5d48766c39eef21d790
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Sharaku: c18de569fc99f6e936f46ca812b571826cc658a7
+  SteviaLayout: 2d6b6d7e9554fa7b2c7c2aba12337b23cf897123
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  YPImagePicker: 6c12892e29681788671a2e51f28ed966cbdef95e
 
-PODFILE CHECKSUM: fabe888ec8c0a544a19e8a7ef14f0eb15ff1a115
+PODFILE CHECKSUM: 6819218f23f97fa3b459a70d3f6cb240e4c18de6
 
 COCOAPODS: 1.2.0

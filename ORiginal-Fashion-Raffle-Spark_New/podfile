@@ -18,6 +18,8 @@ pod 'CryptoSwift'
 pod 'HGCircularSlider', '~> 2.0.0'
 pod 'AnimatedDropdownMenu'
 pod 'Sharaku'
+pod 'YPImagePicker'
+pod 'GoogleMaps'
 
 
 
